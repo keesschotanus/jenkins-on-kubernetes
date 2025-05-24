@@ -1,0 +1,20 @@
+pipeline {
+  agent {
+    kubernetes {
+      yamlFile Jenkinsfile-container-mix.pod.yaml
+    }
+  }
+  stages {
+    stage('Run') {
+      steps {
+        sh 'set'
+        container('nodejs') {
+          sh 'node -v'
+        }
+        container('maven') {
+          sh 'mvn -version'
+        }
+      }
+    }
+  }
+}

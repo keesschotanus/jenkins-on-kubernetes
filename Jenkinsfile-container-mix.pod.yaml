@@ -1,0 +1,15 @@
+metadata:
+spec:
+  containers:
+  - name: nodejs
+    image: node:latest
+    command:
+    - sleep
+    args:
+    - infinity
+  - name: maven
+    image: maven:latest
+    command:
+    - sleep
+    args:
+    - infinity
