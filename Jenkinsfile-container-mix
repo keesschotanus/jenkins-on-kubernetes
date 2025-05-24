@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      yamlFile Jenkinsfile-container-mix.pod.yaml
+      yamlFile 'Jenkinsfile-container-mix.pod.yaml'
     }
   }
   stages {
